@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.cvtc.android.dmtoolkit_krood1.DiceRollerActivity">
+
+        <Spinner
+            android:id="@+id/die_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/die_array"
+            android:layout_margin="15dp"
+            android:padding="10dp">
+        </Spinner>
+
+        <EditText
+            android:id="@+id/modifier_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/die_spinner"
+            android:layout_margin="15dp"
+            android:padding="10dp"
+            android:textSize="20sp"
+            android:hint="@string/modifier"
+            android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/amount_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/modifier_text"
+            android:layout_margin="15dp"
+            android:padding="10dp"
+            android:textSize="20sp"
+            android:hint="@string/amount_to_roll"
+            android:inputType="number"/>
+
+        <Button
+            android:id="@+id/roll_button"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/amount_text"
+            android:layout_centerHorizontal="true"
+            android:textSize="18sp"
+            android:text="@string/roll"
+            />
+
+        <TextView
+            android:id="@+id/result_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/roll_button"
+            android:layout_margin="15dp"
+            android:textSize="20sp"
+            android:padding="10sp"
+            tools:text="@string/placeholder"
+            android:textAlignment="center"/>
+
+        </RelativeLayout>
+    <ListView
+        android:id="@+id/navList"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|start"
+        android:background="#FFFFFF"/>
+
+</android.support.v4.widget.DrawerLayout>
